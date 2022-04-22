@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="77608" started-at="2022-04-21T07:00:52Z" finished-at="2022-04-21T07:02:10Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="77608" started-at="2022-04-21T07:00:52Z" finished-at="2022-04-21T07:02:10Z">
+      <class name="tests.ApiDemoTest">
+        <test-method status="PASS" signature="apiDemo(java.lang.String)[pri:0, instance:tests.ApiDemoTest@3b0143d3]" name="apiDemo" duration-ms="20477" started-at="2022-04-21T12:31:29Z" data-provider="InputData" finished-at="2022-04-21T12:31:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hello]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiDemo -->
+        <test-method status="PASS" signature="apiDemo(java.lang.String)[pri:0, instance:tests.ApiDemoTest@3b0143d3]" name="apiDemo" duration-ms="20384" started-at="2022-04-21T12:31:50Z" data-provider="InputData" finished-at="2022-04-21T12:32:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vai@357%]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- apiDemo -->
+      </class> <!-- tests.ApiDemoTest -->
+      <class name="tests.Ecommerce_tc_4">
+        <test-method status="PASS" signature="killAllNodes()[pri:0, instance:tests.Ecommerce_tc_4@57536d79]" name="killAllNodes" is-config="true" duration-ms="3024" started-at="2022-04-21T12:30:52Z" finished-at="2022-04-21T12:30:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- killAllNodes -->
+        <test-method status="PASS" signature="totalValidation()[pri:0, instance:tests.Ecommerce_tc_4@57536d79]" name="totalValidation" duration-ms="33676" started-at="2022-04-21T12:30:55Z" finished-at="2022-04-21T12:31:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- totalValidation -->
+      </class> <!-- tests.Ecommerce_tc_4 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
