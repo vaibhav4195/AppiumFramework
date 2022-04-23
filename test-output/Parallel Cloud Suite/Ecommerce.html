@@ -1,22 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<title>TestNG Report</title>
-<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+<title>TestNG:  Ecommerce</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
 </head>
 <body>
-<table>
-<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Parallel Cloud Suite</th></tr>
-<tr><td><a href="#t0">Ecommerce</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">847,659</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">ApiDemoTest</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">908,904</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num attn">3</th><th class="num">1,756,563</th><th colspan="2"></th></tr>
-</table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Parallel Cloud Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Ecommerce &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.Ecommerce_tc_5_Cloud</td><td><a href="#m0">totalValidation</a></td><td rowspan="1">1650623741712</td><td rowspan="1">847626</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">ApiDemoTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.ApiDemoTest2_Cloud</td><td><a href="#m1">apiDemo</a></td><td rowspan="2">1650623741712</td><td rowspan="2">847012</td></tr><tr class="failedeven"><td><a href="#m2">apiDemo</a></td></tr></tbody>
-</table>
-<h2>Ecommerce</h2><h3 id="m0">tests.Ecommerce_tc_5_Cloud#totalValidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: There was an error. Please try again. (WARNING: The server did not provide any stacktrace information)
+<h2 align='center'>Ecommerce</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 22 16:05:41 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>847 seconds (847659 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.Ecommerce_tc_5_Cloud.totalValidation()'><b>totalValidation</b><br>Test class: tests.Ecommerce_tc_5_Cloud</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: There was an error. Please try again. (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 846.63 seconds
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;AQMIT-DSK-10159&apos;, ip: &apos;172.20.80.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
@@ -67,9 +127,9 @@ Driver info: driver.version: AndroidDriver
 	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
 	... 40 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ApiDemoTest</h2><h3 id="m1">tests.ApiDemoTest2_Cloud#apiDemo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Hello</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: There was an error. Please try again. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 845.99 seconds
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace938378528", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace938378528'><pre>org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Please check the server log for more details. Original error: There was an error. Please try again. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 846.63 seconds
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;AQMIT-DSK-10159&apos;, ip: &apos;172.20.80.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: driver.version: AndroidDriver
@@ -91,18 +151,43 @@ Driver info: driver.version: AndroidDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
 	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:96)
 	at practise.AppiumFramework.base.cloudCapabilities(base.java:126)
-	at tests.ApiDemoTest2_Cloud.apiDemo(ApiDemoTest2_Cloud.java:21)
+	at tests.Ecommerce_tc_5_Cloud.totalValidation(Ecommerce_tc_5_Cloud.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:40)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:459)
+	at org.testng.internal.thread.ThreadUtil$1.call(ThreadUtil.java:52)
 	at java.util.concurrent.FutureTask.run(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
 	... 35 more
 Caused by: org.openqa.selenium.WebDriverException: There was an error. Please try again. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 845.99 seconds
+Command duration or timeout: 846.63 seconds
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;AQMIT-DSK-10159&apos;, ip: &apos;172.20.80.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
 Driver info: driver.version: AndroidDriver
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
 	at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$errorHandler$0(JsonWireProtocolResponse.java:54)
@@ -119,50 +204,9 @@ Driver info: driver.version: AndroidDriver
 	at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
 	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:128)
 	... 40 more
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.ApiDemoTest2_Cloud#apiDemo</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Vai@357%</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create a new remote session. Original error: Connection reset
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;AQMIT-DSK-10159&apos;, ip: &apos;172.20.80.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: driver.version: AndroidDriver
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:216)
-	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:225)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:247)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
-	at io.appium.java_client.AppiumDriver.startSession(AppiumDriver.java:338)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:37)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:89)
-	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:99)
-	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:96)
-	at practise.AppiumFramework.base.cloudCapabilities(base.java:126)
-	at tests.ApiDemoTest2_Cloud.apiDemo(ApiDemoTest2_Cloud.java:21)
-	at java.util.concurrent.FutureTask.run(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
-	at java.lang.Thread.run(Unknown Source)
-	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:193)
-	... 35 more
-Caused by: java.net.SocketException: Connection reset
-	at java.net.SocketInputStream.read(Unknown Source)
-	at java.net.SocketInputStream.read(Unknown Source)
-	at okio.Okio$2.read(Okio.java:140)
-	at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
-	at okio.RealBufferedSource.request(RealBufferedSource.java:68)
-	at okio.RealBufferedSource.require(RealBufferedSource.java:61)
-	at okio.RealBufferedSource.readHexadecimalUnsignedLong(RealBufferedSource.java:304)
-	at okhttp3.internal.http1.Http1Codec$ChunkedSource.readChunkSize(Http1Codec.java:469)
-	at okhttp3.internal.http1.Http1Codec$ChunkedSource.read(Http1Codec.java:449)
-	at okio.Buffer.writeAll(Buffer.java:1053)
-	at okio.RealBufferedSource.readByteArray(RealBufferedSource.java:108)
-	at okhttp3.ResponseBody.bytes(ResponseBody.java:137)
-	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:106)
-	at io.appium.java_client.remote.AppiumCommandExecutor.lambda$1(AppiumCommandExecutor.java:162)
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
-	... 40 more
-... Removed 21 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</pre></div></td>
+<td>847</td>
+<td>tests.Ecommerce_tc_5_Cloud@63753b6d</td></tr>
+</table><p>
 </body>
 </html>

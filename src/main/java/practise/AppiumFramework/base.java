@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.URL;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -55,7 +56,7 @@ public class base {
 			}
 		
 		
-		@BeforeTest
+//		@BeforeTest
 		public void killAllNodes() throws Exception {
 			//to kill a appium server if it already running
 			Runtime.getRuntime().exec("taskkill /F /IM node.exe");
@@ -96,6 +97,44 @@ public class base {
 //			return driver;
 			
 			
+		}
+		
+		
+		public static AndroidDriver<AndroidElement> cloudCapabilities(String appName) throws IOException{
+			
+			DesiredCapabilities cap = new DesiredCapabilities();
+			
+			// Set your access credentials
+	    	cap.setCapability("browserstack.user", "vaibhavpawde_CX1GHW");
+	    	cap.setCapability("browserstack.key", "VsDqmnCsXXAfKRpiPpDV");
+	    	
+			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
+			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,14);
+			
+			if(appName.equalsIgnoreCase("GeneralStoreApp"))
+			{
+			// Set URL of the application under test
+				cap.setCapability("app", "bs://d8272b3558409924cd9cacb2ed84120d3931a20e");
+			}
+			else {
+				cap.setCapability("app", "bs://2d167a1544dbca9500229dbcd717ca210c2c967f");
+			}
+			// Specify device and os_version for testing
+			cap.setCapability("device", "Google Pixel 3");
+	    	cap.setCapability("os_version", "10.0");
+			
+			driver = new AndroidDriver<AndroidElement>(new URL("http://hub.browserstack.com/wd/hub"),cap);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			return driver;		
+		}
+		
+		public static AndroidDriver<AndroidElement> runCapabilities(String appName, boolean cloud) throws IOException {
+			if(cloud){
+				return cloudCapabilities(appName);
+			}
+			{
+				return capabilities(appName);
+			}
 		}
 		
 	

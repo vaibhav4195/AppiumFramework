@@ -25,8 +25,8 @@ public class Ecommerce_tc_5_Cloud extends base{
 
 	@Test
 	public void totalValidation() throws IOException, InterruptedException {
-		service = startServer();
-		AndroidDriver<AndroidElement> driver = capabilities("GeneralStoreApp");
+//		service = startServer();
+		AndroidDriver<AndroidElement> driver = cloudCapabilities("GeneralStoreApp");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		FormPage formPage = new FormPage(driver);
@@ -72,7 +72,7 @@ public class Ecommerce_tc_5_Cloud extends base{
 		System.out.println("Total Value of products is: "+total1);
 		
 		Assert.assertEquals(sum, total1);
-		service.stop();
+//		service.stop();
 	}
 
 

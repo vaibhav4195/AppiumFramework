@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="tests.Ecommerce_tc_4">
+      <class name="tests.Ecommerce_tc_5_Cloud">
         <methods>
           <include name="totalValidation"/>
         </methods>
-      </class> <!-- tests.Ecommerce_tc_4 -->
+      </class> <!-- tests.Ecommerce_tc_5_Cloud -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
